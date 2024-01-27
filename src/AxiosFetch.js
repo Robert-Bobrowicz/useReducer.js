@@ -18,7 +18,7 @@ const AxiosFetch = () => {
         });
 
     async function axiosFetchData() {
-        await axios('http://localhost:3003/movies')
+        await axios.get('http://localhost:3003/movies')
             .then(data => {
                 dispatch({ data: data.data });
                 dispatch({ loading: false });
